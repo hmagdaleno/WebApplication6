@@ -1,0 +1,52 @@
+﻿@model WebApplication6.Models.Cliente
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+@using (@Html.BeginForm()){
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Cadastro</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CPF)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CPF)
+            @Html.ValidationMessageFor(model => model.CPF)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nacionalidade)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nacionalidade)
+            @Html.ValidationMessageFor(model => model.Nacionalidade)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Naturalidade)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Naturalidade)
+            @Html.ValidationMessageFor(model => model.Naturalidade)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ativo)
+        </div>
+        <div class="editor-field">
+            @*Html.CheckBoxFor(model => model.Ativo)*@
+            @Html.CheckBox("Ativo", true)
+        </div>
+        
+        <input type="submit" value="Cadastrar" /><input type="reset" value="Limpar" />
+    </fieldset>
+}

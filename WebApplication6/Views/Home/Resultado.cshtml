@@ -1,0 +1,36 @@
+﻿@model WebApplication6.Models.Cliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<fieldset>
+
+    <h2>Cadastrado!</h2>
+
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.CPF)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Nacionalidade)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.Naturalidade)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(model => model.DataCad)
+    </div>
+    <div class="editor-field">
+        @if (Model.Ativo)
+        {
+            <p>Ativo</p>
+        }else{
+            <p>Inativo</p>
+        }
+    </div>
+    <a href="\"><button>Voltar</button> </a>
+</fieldset>
